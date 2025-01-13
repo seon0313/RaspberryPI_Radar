@@ -98,7 +98,7 @@ while True:
             pygame.draw.line(sc,(0,a,0),(size[0]/2,size[1]/2),(x,y),3)
             x2 = (size[0] / 2) + math.cos(math.radians(-i)) * (200*((d/60)/2))
             y2 = (size[1] / 2) + math.sin(math.radians(-i)) * (200*((d/60)/2))
-            pygame.draw.line(sc, (a,0,0), (x2, y2), (x, y), 3)
+            if (y2 > y) pygame.draw.line(sc, (a,0,0), (x2, y2), (x, y), 3)
 
             lines[i]['a'] = a-5
         pygame.draw.circle(sc, (255, 255, 255), (size[0] / 2, size[1] / 2), 200, 2)
